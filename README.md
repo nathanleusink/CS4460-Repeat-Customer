@@ -10,14 +10,6 @@ Welcome to the Repeat Customer Vending Machine Code Repository. There are five p
 4. VREP Controller Code
 5. Supporting Controllers and Modules
 
-
-
-
-
-
-
-
-
 **Key File Descriptions**
 
 **PSO CODE:**
@@ -57,5 +49,12 @@ _1. order_info.py_
 _Master Controller_
 
 _1. master_control_script.py_
+
+
+
+
+
+**DATA FLOW DIAGRAM**
+![alt text](https://github.com/nathanleusink/CS4460-Repeat-Customer/blob/main/Dataflow%20Diagram.PNG?raw=true)
 
 
