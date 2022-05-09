@@ -10,8 +10,9 @@ import random
 import re
 
 # For easy tweaking, these are the modifier variables for the velocity function later
-selfAdj = 4
-globAdj = 2
+selfAdj = .9
+globAdj = .6
+inertia = .2
 
 
 # Class definition, the important individual particle
@@ -112,7 +113,7 @@ def PSO(particles, table, runs):
             vec = []
             # For each coordinate, determine a velocity
             for i in range(len(part.coord)):
-                vec.append(round(part.vel[i] + (selfAdj * randself * (part.best[i] - part.coord[i]))
+                vec.append(round((part.vel[i] * inertia) + (selfAdj * randself * (part.best[i] - part.coord[i]))
                                  + (globAdj * randglob * (globBest[i] - part.coord[i]))))
             # Move the particle
             part.move(vec)
@@ -277,7 +278,7 @@ def score(custID, score):
 
         # For each coordinate, determine a velocity
         for i in range(len(sand.coord)):
-            vec.append(round(sand.vel[i] + (selfAdj * randself * (sand.best[i] - sand.coord[i]))
+            vec.append(round((sand.vel[i] * inertia) + (selfAdj * randself * (sand.best[i] - sand.coord[i]))
                              + (globAdj * randglob * (globBest.coord[i] - sand.coord[i]))))
         # Move the particle
         sand.move(vec)

@@ -123,7 +123,7 @@ def control_loop():
             #Process Order
             #Check Ingredients --- OpenCV
             print("[LOG] Checking Quality of Ingredients")
-            #action = ir.external_control_loop()
+            action = ir.recognize_ingredient()
                 
             #Create Sandwich --- VREP
             print("[LOG] CREATING SANDWICH THEORETICALLY IN VREP")

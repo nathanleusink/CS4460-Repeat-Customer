@@ -113,12 +113,15 @@ def recognizeEmotion():
 
 def decodePrediction(prediction):
 
+    print("\n\n", prediction, "\n\n")
+
     emotion_recognized = ""
     weighted_pso_change = 50
     
     confidence = np.amax(prediction)
     max_index = np.argmax(prediction)
 
+    #{'angry': 0, 'disgust': 1, 'fear': 2, 'happy': 3, 'neutral': 4, 'sad': 5, 'surprise': 6}
     match max_index:
 
         #Angry
