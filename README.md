@@ -48,7 +48,7 @@ _1. order_info.py_
 
 _Master Controller_
 
-_1. master_control_script.py_
+_1. master_control_script.py (RUN THIS SCRIPT TO START THE PROGRAM)_
 
 
 
